@@ -46,7 +46,7 @@ def init_db():
 		''')
 		
         connection.execute('''
-			CREATE TABLE user_quiz (
+			CREATE TABLE IF NOT EXISTS user_quiz (
 				id INTEGER PRIMARY KEY AUTOINCREMENT,
 				user_id INTEGER,
 				quiz_id INTEGER,
@@ -56,7 +56,7 @@ def init_db():
 		''')
         
         cursor.execute('''
-			CREATE TABLE quiz_list (
+			CREATE TABLE IF NOT EXISTS quiz_list (
 				id INTEGER PRIMARY KEY AUTOINCREMENT,
 				judul TEXT NOT NULL,
 				icon TEXT NOT NULL
