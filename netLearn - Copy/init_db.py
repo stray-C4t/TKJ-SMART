@@ -12,6 +12,7 @@ def init_db():
         connection.execute('DROP TABLE IF EXISTS quiz_list')
         connection.execute('DROP TABLE IF EXISTS quiz_questions')
         connection.execute('DROP TABLE IF EXISTS users')
+        connection.execute('DROP TABLE IF EXISTS user_quiz')
         
         # 3. Buat tabel modul dengan kolom yang lengkap
         connection.execute('''
